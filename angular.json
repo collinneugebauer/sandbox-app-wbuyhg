@@ -1,0 +1,264 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "surescripts": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "surescripts",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/surescripts",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "surescripts:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "surescripts:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "surescripts:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "product-dropdown": {
+      "root": "projects/product-dropdown",
+      "sourceRoot": "projects/product-dropdown/src",
+      "projectType": "library",
+      "prefix": "surescripts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/product-dropdown/tsconfig.lib.json",
+            "project": "projects/product-dropdown/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/product-dropdown/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/product-dropdown/src/test.ts",
+            "tsConfig": "projects/product-dropdown/tsconfig.spec.json",
+            "karmaConfig": "projects/product-dropdown/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/product-dropdown/tsconfig.lib.json",
+              "projects/product-dropdown/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "user-profile": {
+      "root": "projects/user-profile",
+      "sourceRoot": "projects/user-profile/src",
+      "projectType": "library",
+      "prefix": "surescripts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/user-profile/tsconfig.lib.json",
+            "project": "projects/user-profile/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/user-profile/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/user-profile/src/test.ts",
+            "tsConfig": "projects/user-profile/tsconfig.spec.json",
+            "karmaConfig": "projects/user-profile/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/user-profile/tsconfig.lib.json",
+              "projects/user-profile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "left-navigation": {
+      "root": "projects/left-navigation",
+      "sourceRoot": "projects/left-navigation/src",
+      "projectType": "library",
+      "prefix": "surescripts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/left-navigation/tsconfig.lib.json",
+            "project": "projects/left-navigation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/left-navigation/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/left-navigation/src/test.ts",
+            "tsConfig": "projects/left-navigation/tsconfig.spec.json",
+            "karmaConfig": "projects/left-navigation/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/left-navigation/tsconfig.lib.json",
+              "projects/left-navigation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "notifications": {
+      "root": "projects/notifications",
+      "sourceRoot": "projects/notifications/src",
+      "projectType": "library",
+      "prefix": "surescripts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/notifications/tsconfig.lib.json",
+            "project": "projects/notifications/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/notifications/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/notifications/src/test.ts",
+            "tsConfig": "projects/notifications/tsconfig.spec.json",
+            "karmaConfig": "projects/notifications/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/notifications/tsconfig.lib.json",
+              "projects/notifications/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "surescripts"
+}

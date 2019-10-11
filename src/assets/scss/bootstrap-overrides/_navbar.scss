@@ -1,0 +1,10 @@
+// Navbar
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.app-navigator::after {
+    content: none;
+} 

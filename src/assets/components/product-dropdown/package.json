@@ -1,0 +1,25 @@
+{
+  "name": "@surescripts/product-dropdown",
+  "version": "5.1.0-alpha",
+  "peerDependencies": {
+    "@angular/common": "^8.2.2",
+    "@angular/core": "^8.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.0",
+    "@surescripts/glue": ">=4.3.1-alpha",
+    "bootstrap": "^4.3.1",
+    "rxjs": "^6.5.2"
+  },
+  "main": "bundles/surescripts-product-dropdown.umd.js",
+  "module": "fesm5/surescripts-product-dropdown.js",
+  "es2015": "fesm2015/surescripts-product-dropdown.js",
+  "esm5": "esm5/surescripts-product-dropdown.js",
+  "esm2015": "esm2015/surescripts-product-dropdown.js",
+  "fesm5": "fesm5/surescripts-product-dropdown.js",
+  "fesm2015": "fesm2015/surescripts-product-dropdown.js",
+  "typings": "surescripts-product-dropdown.d.ts",
+  "metadata": "surescripts-product-dropdown.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-dark fixed-top navbar-expand-sm bg-brand shadow">
+  <ul class="navbar-nav">
+    <li>
+        <surescripts-product-dropdown currentProduct="surescripts-developer" ssoBaseUrl="https://localhost:44366"></surescripts-product-dropdown>
+    </li>
+  </ul>
+  <a class="navbar-brand" id="home-link" title="Surescripts" [routerLink]="['/home']">Surescripts</a>
+  <ul class="navbar-nav mr-auto">
+    <li [routerLinkActive]="['active']" class="nav-item">
+      <a class="nav-link" [routerLink]="['/home']">
+        Home
+      </a>
+    </li>
+    <li [routerLinkActive]="['active']" class="nav-item">
+      <a class="nav-link" [routerLink]="['/left-nav']">
+        Left Nav
+      </a>
+    </li>
+    <li [routerLinkActive]="['active']" class="nav-item">
+      <a class="nav-link" [routerLink]="['/blank']">
+        Blank
+      </a>
+    </li>
+  </ul>
+  <ul class="navbar-nav">
+    <li>
+      <surescripts-notifications ssoBaseUrl="https://localhost:44366"></surescripts-notifications>
+    </li>
+    <li>
+      <surescripts-user-profile ssoBaseUrl="https://localhost:44366" logoutUrl="logout"></surescripts-user-profile>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+      <surescripts-left-navigation></surescripts-left-navigation>
+      <main role="main" class="col-sm-12 ml-sm-auto mt-2" [ngClass]="{'collapsed' : collapsed, 'with-nav' : displayNav}">
+          <router-outlet></router-outlet>
+      </main>
+  </div>
+</div>
+

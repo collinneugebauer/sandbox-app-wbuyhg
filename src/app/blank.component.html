@@ -1,0 +1,55 @@
+<!-- An example of a table. 
+<div style="text-align:center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-hover table-striped table-sm" *ngIf="results && results.items && results.items.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Type</th>
+        <th scope="col">Microsite</th>
+        <th scope="col" class="text-center">Global</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of results.items;">
+        <td class="break-word w-35">
+          <a [routerLink]="['/permissions', p.id]" [id]="p.id" [title]="p.name">{{ p.name }}</a>
+        </td>
+        <td class="break-word w-35">{{ p.description }}</td>
+        <td>{{ p.type }}</td>
+        <td>
+          <span *ngIf="!canViewMicrosite && p.ssoClientId">{{ p.microsite }}</span>
+          <a [routerLink]="['/microsites', p.ssoClientId]" [id]="p.id" [title]="p.microsite" *ngIf="canViewMicrosite && p.ssoClientId">{{ p.microsite }}</a> 
+        </td>
+        <td class="text-center"><fa-icon [icon]="['far', 'check-square']" *ngIf="!p.ssoClientId"></fa-icon></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="pageSize" class="mr-2">Records per page:</label>
+          <select name="pageSize" id="pageSize" class="form-control"
+                  [(ngModel)]="criteria.pageSize">
+            <option *ngFor="let s of pageSizes" [ngValue]="s">{{ s }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9 form-group">
+      <ngb-pagination [collectionSize]="results.total"
+                      [pageSize]="criteria.pageSize"
+                      [(page)]="criteria.pageIndex"
+                      [rotate]="true"
+                      (pageChange)="search($event)">
+      </ngb-pagination>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->

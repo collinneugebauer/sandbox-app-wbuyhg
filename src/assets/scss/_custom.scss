@@ -1,0 +1,64 @@
+
+// VARIABLE OVERRIDES
+    // Colors
+    $gray-100: #f3f3f3;
+    $gray-200: #e8e8e8;
+    $gray-300: #d1d1d1;
+    $gray-400: #c6c6c6;
+    $gray-500: #afafaf;
+    $gray-600: #989898;
+    $gray-700: #818181;
+    $gray-800: #5e5e5e;
+    $gray-900: #3c3c3c;
+    $black:    #1a1a1a;
+
+    $brand-blue:        #105677;
+    $brand-md-blue:     #0886b2;
+    $brand-lt-blue:     #089bcd;
+    $brand-orange:      #f7901e;
+    $primary:           $brand-md-blue;
+    $secondary:         $gray-700;
+    $success:           #048006;
+    $info:              $brand-lt-blue;
+    $warning:           #f7cc1e;
+    $danger:            #bf212c;
+    $light:             $gray-400;
+
+    $theme-colors: (
+        "brand": $brand-blue,
+        "brand-md": $brand-md-blue,
+        "brand-lt": $brand-lt-blue,
+        "brand-orange": $brand-orange,
+    );
+
+    // Body
+    // Settings for the '<body>' element.
+    $body-color: $black;
+
+    // Components
+    // Define common padding and border radius sizes and more.
+    $line-height-sm: 1.25;
+
+    $border-color: $gray-200;
+
+    // Fonts
+    // Font, line-height, and color for body text, headings, and more.
+    $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    $font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    $font-size-base: .875rem;
+
+    $headings-font-weight: 700;
+
+    $display1-weight: 300;
+    $display2-weight: 300;
+    $display3-weight: 300;
+    $display4-weight: 300;
+
+    $lead-font-weight: 300;
+
+    // Tables
+    // Customizes the `.table` component with basic values, each used across all table variations.
+    $table-cell-padding: .625rem;
+
+    $table-border-color: $gray-200;

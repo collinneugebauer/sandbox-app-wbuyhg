@@ -1,0 +1,28 @@
+{
+  "name": "@surescripts/notifications",
+  "version": "5.1.0-alpha",
+  "peerDependencies": {
+    "@angular/common": "^8.2.2",
+    "@angular/core": "^8.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.0",
+    "@surescripts/glue": ">=4.3.1-alpha",
+    "bootstrap": "^4.3.1",
+    "rxjs": "^6.5.2",
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1"
+  },
+  "main": "bundles/surescripts-notifications.umd.js",
+  "module": "fesm5/surescripts-notifications.js",
+  "es2015": "fesm2015/surescripts-notifications.js",
+  "esm5": "esm5/surescripts-notifications.js",
+  "esm2015": "esm2015/surescripts-notifications.js",
+  "fesm5": "fesm5/surescripts-notifications.js",
+  "fesm2015": "fesm2015/surescripts-notifications.js",
+  "typings": "surescripts-notifications.d.ts",
+  "metadata": "surescripts-notifications.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

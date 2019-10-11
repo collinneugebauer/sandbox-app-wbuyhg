@@ -1,0 +1,25 @@
+{
+  "name": "@surescripts/user-profile",
+  "version": "5.1.0-alpha",
+  "peerDependencies": {
+    "@angular/common": "^8.2.2",
+    "@angular/core": "^8.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.0",
+    "@surescripts/glue": ">=4.3.1-alpha",
+    "bootstrap": "^4.3.1",
+    "rxjs": "^6.5.2"
+  },
+  "main": "bundles/surescripts-user-profile.umd.js",
+  "module": "fesm5/surescripts-user-profile.js",
+  "es2015": "fesm2015/surescripts-user-profile.js",
+  "esm5": "esm5/surescripts-user-profile.js",
+  "esm2015": "esm2015/surescripts-user-profile.js",
+  "fesm5": "fesm5/surescripts-user-profile.js",
+  "fesm2015": "fesm2015/surescripts-user-profile.js",
+  "typings": "surescripts-user-profile.d.ts",
+  "metadata": "surescripts-user-profile.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
